@@ -140,59 +140,74 @@ int main() //Criando a função.
 	  // Definindo Variáveis.
         int opcao=0; 
         int ciclo=1;
-    
-        for(ciclo=1;ciclo=1;) //Laço de repetição.
-    {
-    	
-	    system("cls");//Responsável por limpar a tela do usuário.
-	
-        setlocale(LC_ALL, "Portuguese"); //Defindo a linguagem.
-                                 
-    // Início do Menu					 
-        printf("### Cartório da EBAC ###\n\n");
-    	printf("escolha a opção desejada:\n\n");
-        printf("\t1 - Registrar Nomes\n");
-        printf("\t2 - Consultar Nomes\n");
-        printf("\t3 - Deletar Nomes\n");
-        printf("\t4 - Sair do sistema\n\n");
-        printf("Opção:");
-    // Fim do menu: 
- 
-        scanf("%d", &opcao);//Armazenando as escolhas.
-    
-        system("cls");//Resposável por limpar a tela do usuário.
+        char senhadigitada[10]="a";
+        int comparacao; //comparação das variáveis.
         
-        switch (opcao)//Responsável por chamar a váriavel
-		{   
-	  
-		case 1:
-			
-		    registro();// chamando a função
-            break; // Fim da chamada/função.
-            
-        case 2:
-            
-            consultar();// chamando a função
-	        break; // Fim da chamada/função.
-	        
-	    case 3:
-	        
-	        deletar();// chamando a função
-            break; // Fim da chamada/função.
-            
-        case 4:
+         // Inicio da tela de login do administrador.
+        printf("### Cartório da EBAC ###\n\n");
+        printf("Login de administrador!\n\n Digite a senha:");
+		scanf("%s",senhadigitada); // Salvando no banco de dados a senha digitada.
 		
-		    printf ("Obrigado por utilizar o sistema!\n");
-			return 0; //Retorna ao valor 0 (quebra laços e função.
-			break; // Fim da chamada da função.
+		comparacao = strcmp(senhadigitada, "admin"); //Comparando o valor da string, Ecomparando se o valor é igual. e colocando dentro da variável(comparação)
+		if(senhadigitada[10] == "admin")
+		
+		if(comparacao == 0)
+		
+	    {
+		
+            for(ciclo=1;ciclo=1;) //Laço de repetição.
+            {
+    	
+	        system("cls");//Responsável por limpar a tela do usuário.
+	
+            setlocale(LC_ALL, "Portuguese"); //Defindo a linguagem.
+                                 
+            // Início do Menu					 
+            printf("### Cartório da EBAC ###\n\n");
+    	    printf("escolha a opção desejada:\n\n");
+            printf("\t1 - Registrar Nomes\n");
+            printf("\t2 - Consultar Nomes\n");
+            printf("\t3 - Deletar Nomes\n");
+            printf("\t4 - Sair do sistema\n\n");
+            printf("Opção:");
+            // Fim do menu: 
+ 
+            scanf("%d", &opcao);//Armazenando as escolhas.
+    
+            system("cls");//Resposável por limpar a tela do usuário.
+        
+            switch (opcao)//Responsável por chamar a váriavel
+		    {   
+	  
+		    case 1:
+			
+		        registro();// chamando a função
+                break; // Fim da chamada/função.
             
-        default://Respondável para caso encontre uma opção invalida.
+            case 2:
+            
+                consultar();// chamando a função
+	            break; // Fim da chamada/função.
+	        
+	        case 3:
+	        
+	            deletar();// chamando a função
+                break; // Fim da chamada/função.
+            
+            case 4:
+		
+		        printf ("Obrigado por utilizar o sistema!\n");
+			    return 0; //Retorna ao valor 0 (quebra laços e função.
+			    break; // Fim da chamada da função.
+            
+            default://Respondável para caso encontre uma opção invalida.
             	
-            printf("Essa opção não está disponível!\n");
-            system("pause");	
-            break; // Fim da chamada/função.
-		}
+                printf("Essa opção não está disponível!\n");
+                system("pause");	
+                break; // Fim da chamada/função.
+		    }
+	    }
     }
-
-	   
+    else 
+	    printf("Senha incorreta!");
 }
