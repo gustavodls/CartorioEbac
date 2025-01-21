@@ -141,20 +141,14 @@ int main() //Criando a função.
         int opcao=0; 
         int ciclo=1;
         char senhadigitada[10]="a";
-        int comparacao; //comparação das variáveis.
-        
-         // Inicio da tela de login do administrador.
+		
+	       // Inicio da tela de login do administrador.
         printf("### Cartório da EBAC ###\n\n");
         printf("Login de administrador!\n\n Digite a senha:");
 		scanf("%s",senhadigitada); // Salvando no banco de dados a senha digitada.
 		
-		comparacao = strcmp(senhadigitada, "admin"); //Comparando o valor da string, Ecomparando se o valor é igual. e colocando dentro da variável(comparação)
-		if(senhadigitada[10] == "admin")
-		
-		if(comparacao == 0)
-		
-	    {
-		
+		if(senhadigitada[10] == "admin");
+		    {
             for(ciclo=1;ciclo=1;) //Laço de repetição.
             {
     	
@@ -207,7 +201,8 @@ int main() //Criando a função.
                 break; // Fim da chamada/função.
 		    }
 	    }
-    }
-    else 
-	    printf("Senha incorreta!");
+	}
+	 else
+	    printf("Senha incorreta! ");    
 }
+    
