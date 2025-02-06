@@ -141,14 +141,18 @@ int main() //Criando a função.
         int opcao=0; 
         int ciclo=1;
         char senhadigitada[10]="a";
+        int comparacao;
 		
 	       // Inicio da tela de login do administrador.
         printf("### Cartório da EBAC ###\n\n");
         printf("Login de administrador!\n\n Digite a senha:");
 		scanf("%s",senhadigitada); // Salvando no banco de dados a senha digitada.
 		
-		if(senhadigitada[10] == "admin");
-		    {
+		comparacao = strcmp(senhadigitada, "admin");
+		
+		if(comparacao == 0 )
+		{
+		    system("cls");	
             for(ciclo=1;ciclo=1;) //Laço de repetição.
             {
     	
